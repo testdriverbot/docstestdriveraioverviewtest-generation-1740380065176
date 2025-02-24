@@ -1,0 +1,23 @@
+version: 4.2.12
+session: 67bc19c48a7f4c76357a1e0c
+steps:
+  - prompt: Locate and click the "Start" button.
+    commands:
+      - command: hover-text
+        text: Type here to search
+        description: text near the Start button on the taskbar
+        action: click
+  - prompt: Assert that a new page or modal opens with further instructions.
+    commands:
+      - command: assert
+        expect: the search interface is open
+  - prompt: >-
+      Verify that the URL or page content reflects the intended action.  # Use
+      the content of the file from the environment
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: docs.testdriver.ai/overview/test-generation
+        description: URL in the browser's address bar
+        action: hover
