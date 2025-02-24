@@ -1,0 +1,25 @@
+version: 4.2.12
+session: 67bc19ac8a7f4c76357a1e01
+steps:
+  - prompt: Navigate to a different key section, e.g., "GitHub Setup".
+    commands:
+      - command: hover-text
+        text: GitHub Setup
+        description: section link in the left sidebar
+        action: click
+  - prompt: Assert that the page loads within an acceptable time frame.
+    commands:
+      - command: wait-for-text
+        text: GitHub Setup
+  - prompt: Navigate to another section like "Performance".
+    commands:
+      - command: hover-text
+        text: Performance
+        description: section link in the left sidebar
+        action: click
+  - prompt: >-
+      Assert the page also loads quickly and correctly.  # Use the content of
+      the file from the environment
+    commands:
+      - command: wait-for-text
+        text: Performance
