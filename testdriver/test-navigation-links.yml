@@ -1,0 +1,27 @@
+version: 4.2.12
+session: 67bc19b58a7f4c76357a1e03
+steps:
+  - prompt: Click on "Overview" in the sidebar.
+    commands:
+      - command: hover-text
+        text: Overview
+        description: overview link in the sidebar
+        action: click
+  - prompt: Assert that the "Overview" page content is displayed.
+    commands:
+      - command: assert
+        expect: Why use the GitHub action? is visible on the page
+  - prompt: Click on "CLI Commands" in the sidebar.
+    commands:
+      - command: hover-text
+        text: CLI Commands
+        description: cli commands link in the sidebar
+        action: click
+  - prompt: >-
+      Assert that the "CLI Commands" page content is displayed.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: >-
+          Commands you can run in our interactive terminal is visible on the
+          page
