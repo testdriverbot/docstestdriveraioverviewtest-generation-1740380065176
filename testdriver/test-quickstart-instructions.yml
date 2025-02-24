@@ -1,0 +1,9 @@
+version: 4.2.12
+session: 67bc19b68a7f4c76357a1e05
+steps:
+  - prompt: Read the Quickstart section.
+    commands:
+      - command: scroll
+        direction: down
+        method: keyboard
+        amount: 300
